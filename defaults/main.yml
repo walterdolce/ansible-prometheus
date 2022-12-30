@@ -1,4 +1,6 @@
 ---
+walterdolce_prometheus_skip_selinux_tasks: true
+
 prometheus_version: 2.27.0
 prometheus_binary_local_dir: ''
 prometheus_skip_install: false
