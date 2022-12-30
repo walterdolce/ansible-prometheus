@@ -123,6 +123,7 @@
   retries: 5
   delay: 2
   when:
+    - walterdolce_prometheus_skip_selinux_tasks is false
     - ansible_version.full is version('2.4', '>=')
     - ansible_selinux.status == "enabled"
 
@@ -133,5 +134,6 @@
     setype: http_port_t
     state: present
   when:
+    - walterdolce_prometheus_skip_selinux_tasks is false
     - ansible_version.full is version('2.4', '>=')
     - ansible_selinux.status == "enabled"
