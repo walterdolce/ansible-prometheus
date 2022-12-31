@@ -40,7 +40,6 @@ ExecStart={{ _prometheus_binary_install_dir }}/prometheus \
 {% endfor %}
   --config.file={{ prometheus_config_dir }}/prometheus.yml
 
-CapabilityBoundingSet=CAP_SET_UID
 LimitNOFILE=65000
 NoNewPrivileges=true
 PrivateDevices=true
